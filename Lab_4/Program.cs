@@ -20,6 +20,7 @@
         }
         static void Zadanie2()
         {
+            
 
         }
     }
