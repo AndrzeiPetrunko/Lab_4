@@ -119,5 +119,10 @@ namespace Lab_4
         {
             return this.MozeSamWracacDoDomu;
         }
+
+        public override string? ToString()
+        {
+            return this.Imie;
+        }
     }
 }

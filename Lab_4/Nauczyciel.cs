@@ -9,10 +9,11 @@ namespace Lab_4
     internal class Nauczyciel : Uczen
     {
         protected string TytulNaukowy;
-        protected List<Uczen> PodwladniUczniowie;
+        protected List<Uczen> PodwladniUczniowie = new List<Uczen>();
+        
         public void AssignStudent(Uczen stud)
         {
-            this.PodwladniUczniowie.Add(stud);
+            PodwladniUczniowie.Add(stud);
         }
 
         public void WhichStudentCanGoHomeAlone()
@@ -21,7 +22,7 @@ namespace Lab_4
             {
                 if (u.CanGoAloneToHome())
                 {
-                    Console.WriteLine($"Uczeń {u.GetFullName} może sam pójść do domu.");
+                    Console.WriteLine($"Uczeń {u.GetFullName()} może sam pójść do domu.");
                 }
                 else
                 {

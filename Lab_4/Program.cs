@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Zadanie1();
+            //Zadanie1();
             Zadanie2();
         }
         static void Zadanie1()
@@ -26,6 +26,11 @@
             u1.SetPesel("07271578913");
             u2.SetPesel("15251203916");
             u1.SetCanGoHomeAlone();
+            u1.SetFirstName("Abel");
+            u1.SetLastName("Smith");
+            u2.SetMaPozwolenie(true);
+            u2.SetFirstName("Abellll");
+            u2.SetLastName("Smithhhh");
             u2.SetCanGoHomeAlone();
             Nauczyciel n1 = new Nauczyciel();
             n1.AssignStudent(u1);
