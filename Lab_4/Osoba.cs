@@ -9,9 +9,9 @@ namespace Lab_4
 {
     abstract class Osoba
     {
-        private string Imie;
-        private string Nazwisko;
-        private string Pesel;
+        protected string Imie;
+        protected string Nazwisko;
+        protected string Pesel;
         /*public Osoba()
         {
             Imie = string.Empty;
@@ -24,58 +24,17 @@ namespace Lab_4
             this.Nazwisko = Nazwisko;
             this.Pesel = Pesel;
         }*/
-        public void SetFirstName(string Imie)
-        {
-            this.Imie = Imie;
-        }
-        public void SetLastName(string Nazwisko)
-        {
-            this.Nazwisko = Nazwisko;
-        }
-        public void SetPesel(string Pesel)
-        {
-            this.Pesel = Pesel;
-        }
-        public void GetAge()
+        public abstract void SetFirstName(string Imie);
+        public abstract void SetLastName(string Nazwisko);
+        public abstract void SetPesel(string Pesel);
+        public abstract int GetAge();
+        public abstract void GetGender();
+        public abstract void GetEducationInfo();
+        public abstract void GetFullName();
+        public abstract void CanGoAloneToHome();
 
-        {
-            if (this.Pesel != null && this.Imie != null)
-            {
-                int y;
-                int result;
-                if (this.Pesel[2] < 2)
-                {
-                    y = Convert.ToInt32($"19{this.Pesel[0]}{this.Pesel[1]}");
-                }
-                else
-                {
-                    y = Convert.ToInt32($"20{this.Pesel[0]}{this.Pesel[1]}");
-                }
-                result = DateTime.Now.Year - y;
-                Console.WriteLine($"{this.Imie} ma {result} rok/lat/lata");
-            }
-            else
-            {
-                Console.WriteLine("Podaj numer PESEL i/lub imię !!!");
-            }
-        }
-        public void GetGender()
-        {
-            if (this.Pesel != null) { 
-                if (this.Pesel[this.Pesel.Length - 1] % 2 == 0)
-                {
-                    Console.WriteLine("Kobieta");
-                }
-                else
-                {
-                    Console.WriteLine("Mężczyzna");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Podaj numer PESEL !!!");
-            }
-        }
+
+
 
 
 

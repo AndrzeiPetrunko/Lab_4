@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Zadanie1();
+            Zadanie2();
         }
         static void Zadanie1()
         {
@@ -20,8 +21,11 @@
         }
         static void Zadanie2()
         {
+            Uczen u1 = new Uczen();  
+            Uczen u2 = new Uczen();
+            u1.SetCanGoHomeAlone(true);
+            u2.SetCanGoHomeAlone(false);
             
-
         }
     }
 }
