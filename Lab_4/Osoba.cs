@@ -30,8 +30,8 @@ namespace Lab_4
         public abstract int GetAge();
         public abstract void GetGender();
         public abstract void GetEducationInfo();
-        public abstract void GetFullName();
-        public abstract void CanGoAloneToHome();
+        public abstract string GetFullName();
+        public abstract bool CanGoAloneToHome();
 
 
 

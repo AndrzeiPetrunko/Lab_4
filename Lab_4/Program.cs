@@ -23,8 +23,14 @@
         {
             Uczen u1 = new Uczen();  
             Uczen u2 = new Uczen();
-            u1.SetCanGoHomeAlone(true);
-            u2.SetCanGoHomeAlone(false);
+            u1.SetPesel("07271578913");
+            u2.SetPesel("15251203916");
+            u1.SetCanGoHomeAlone();
+            u2.SetCanGoHomeAlone();
+            Nauczyciel n1 = new Nauczyciel();
+            n1.AssignStudent(u1);
+            n1.AssignStudent(u2);
+            n1.WhichStudentCanGoHomeAlone();
             
         }
     }

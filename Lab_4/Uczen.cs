@@ -10,6 +10,11 @@ namespace Lab_4
     {
         protected string Szkola;
         protected bool MozeSamWracacDoDomu;
+        protected bool MaPozwolenie;
+        public void SetMaPozwolenie(bool set)
+        {
+            this.MaPozwolenie = set;
+        }
         public void SetSchool(string School)
         {
             this.Szkola = School;
@@ -18,9 +23,14 @@ namespace Lab_4
         {
             this.Szkola = School;
         }
-        public void SetCanGoHomeAlone(bool set)
+        public void SetCanGoHomeAlone()
         {
-            this.MozeSamWracacDoDomu = set;
+            if (this.GetAge() > 12 || this.MaPozwolenie == true)
+                this.MozeSamWracacDoDomu = true;
+            else
+            {
+                this.MozeSamWracacDoDomu = false;
+            }
         }
         public override void SetFirstName(string Imie)
         {
@@ -96,15 +106,18 @@ namespace Lab_4
         {
 
         }
-        public override void GetFullName()
+        public override string GetFullName()
         {
             if (this.Imie != null && this.Nazwisko != null)
-            Console.WriteLine($"Pełne imię ucznia: {this.Imie} {this.Nazwisko}");
+                return this.Imie + " " + this.Nazwisko;
+            else { return "Brak imienia"; }
+
+
         }
 
-        public override void CanGoAloneToHome()
+        public override bool CanGoAloneToHome()
         {
-            
+            return this.MozeSamWracacDoDomu;
         }
     }
 }
